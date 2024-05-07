@@ -231,7 +231,7 @@ def send_SMS_vonage(data_info_sms):
     try:
         crypto_name, below_value, over_value, current_price, time_now = data_info_sms
 
-        client = vonage.Client(key="b1947a5b", secret="cCh4cWvqFM6SlEfP")
+        client = vonage.Client(key="", secret="") #key and secret from vonage API 
         sms = vonage.Sms(client)
 
         if over_value == 0:
@@ -251,7 +251,7 @@ Sent by: PriceSpy Inc.
 
         response = sms.send_message({
             "from": "Vonage APIs",
-            "to": "46701716801",
+            "to": "", #phone number
             "text": message
         })
 
